@@ -7,3 +7,6 @@
 
 - name: Initialize chezmoi
   command: "chezmoi init --apply --verbose {{ chezmoi_init_url }}"
+
+- name: Initialize chezmoi
+  command: "chezmoi update"
