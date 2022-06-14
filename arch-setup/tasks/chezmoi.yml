@@ -8,6 +8,11 @@
 - name: Initialize chezmoi
   command: "chezmoi init --apply --verbose {{ chezmoi_init_url }} --branch main"
 
+- name: Update pull
+  command: "chezmoi git pull"
+  tags:
+  - always
+
 - name: Update chezmoi
   command: "chezmoi update"
   tags:
