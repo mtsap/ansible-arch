@@ -15,5 +15,6 @@
 
 - name: Update chezmoi
   command: "chezmoi update"
+  become: true
   tags:
   - always
