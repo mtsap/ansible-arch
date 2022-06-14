@@ -6,7 +6,7 @@
     state: present
 
 - name: Initialize chezmoi
-  command: "chezmoi init --apply --verbose {{ chezmoi_init_url }}"
+  command: "chezmoi init --apply --verbose {{ chezmoi_init_url }} --branch main"
 
-- name: Initialize chezmoi
+- name: Update chezmoi
   command: "chezmoi update"
