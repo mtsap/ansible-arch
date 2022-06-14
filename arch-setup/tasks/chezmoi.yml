@@ -1,0 +1,9 @@
+---
+- name: Install chezmoi 
+  community.general.pacman:
+    name:
+      - chezmoi
+    state: present
+
+- name: Initialize chezmoi
+  command: "chezmoi init --apply --verbose {{ chezmoi_init_url }}"

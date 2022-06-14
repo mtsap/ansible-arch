@@ -1,0 +1,5 @@
+---
+# defaults file for arch-setup
+
+# Run chezmoi init with a given URL. You can also specify a Github username.
+chezmoi_init_url: "https://github.com/mtsap/dotfiles/"

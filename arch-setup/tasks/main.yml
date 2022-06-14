@@ -1,0 +1,11 @@
+---
+# tasks file for arch-setup
+- name: check updates
+  pacman: 
+   update_cache: yes
+   upgrade: yes
+
+  # Basic apps (vlc, kitty, etc.)
+- include: core-apps.yml
+
+- include: chezmoi.yml
