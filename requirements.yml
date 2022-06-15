@@ -1,6 +1,4 @@
 --- 
 collections: 
-  - 
-    name: 
-      - kewlfft.aur
-      - community.general
+- kewlfft.aur
+- community.general
