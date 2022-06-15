@@ -19,3 +19,5 @@
     name:
       - ttc-iosevka
       - teams
+  become: yes
+  become_user: aur_builder
