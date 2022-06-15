@@ -8,4 +8,6 @@
   # Basic apps (vlc, kitty, etc.)
 - include: core-apps.yml
 
+- include : aur.yml
+
 - include: chezmoi.yml

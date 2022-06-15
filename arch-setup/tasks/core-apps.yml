@@ -3,8 +3,6 @@
    name:
     - xorg
     - kitty
-    - vlc
-    - gimp
     - git
     - bspwm
     - sxhkd
@@ -44,4 +42,12 @@
 - name: Install ImageMagick
   pacman:
     name: imagemagick
+    state: present
+
+- name: Install Programs
+  pacman:
+    name: 
+     - chromium
+      - vlc
+      - gimp
     state: present

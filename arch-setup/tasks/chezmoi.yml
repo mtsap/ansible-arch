@@ -7,14 +7,19 @@
 
 - name: Initialize chezmoi
   command: "chezmoi init --apply --verbose {{ chezmoi_init_url }} --branch main"
+  become: yes
+  become_user: apache
 
 - name: Update pull
   command: "chezmoi git pull"
+  become: yes
+  become_user: apache
   tags:
   - always
 
 - name: Update chezmoi
   command: "chezmoi update"
-  become: true
+  become: yes
+  become_user: apache
   tags:
   - always
