@@ -1,9 +1,11 @@
 ---
-- name: Build and install yay
-  command:
-    chdir: "/home/mtsap/"
-  become: yes
-  become_user: mtsap
+# - name: Build and install yay
+#   command:
+#     chdir: "/home/mtsap/"
+#     cmd: " "
+    
+#   become: yes
+#   become_user: mtsap
 
 - name: Install chezmoi 
   community.general.pacman:
