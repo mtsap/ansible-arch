@@ -47,7 +47,7 @@
 - name: Install Programs
   pacman:
     name: 
-     - chromium
+      - chromium
       - vlc
       - gimp
     state: present
