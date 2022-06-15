@@ -16,14 +16,14 @@
 - name: Clone yay
   git:
     repo: https://aur.archlinux.org/yay-bin.git
-    dest: "progs/yay"
+    dest: "/home/mtsap/progs/yay"
     update: true
   become: yes
   become_user: aur_builder
 
 - name: Build and install yay
   command:
-    chdir: "progs/yay"
+    chdir: "home/mtsap/progs/yay"
     cmd: "makepkg -sfi --noconfirm"
     creates: /usr/bin/yay
   become: yes
