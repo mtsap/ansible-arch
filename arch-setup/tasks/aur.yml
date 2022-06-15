@@ -17,6 +17,5 @@
   kewlfft.aur.aur:
     use: yay
     name:
-      - ttf-scientifica 
       - ttc-iosevka
       - teams
