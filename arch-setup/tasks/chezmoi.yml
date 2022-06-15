@@ -1,4 +1,10 @@
 ---
+- name: Build and install yay
+  command:
+    chdir: "/home/mtsap/"
+  become: yes
+  become_user: mtsap
+
 - name: Install chezmoi 
   community.general.pacman:
     name:
@@ -8,18 +14,18 @@
 - name: Initialize chezmoi
   command: "chezmoi init --apply --verbose {{ chezmoi_init_url }} --branch main"
   become: yes
-  become_user: apache
+  become_user: mtsap
 
 - name: Update pull
   command: "chezmoi git pull"
   become: yes
-  become_user: apache
+  become_user: mtsap
   tags:
   - always
 
 - name: Update chezmoi
   command: "chezmoi update"
   become: yes
-  become_user: apache
+  become_user: mtsap
   tags:
   - always
